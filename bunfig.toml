@@ -1,0 +1,7 @@
+[install]
+registry = { url = "https://registry.npmjs.org", token = "$NPM_TOKEN" }
+
+[run]
+bun = true
+shell = "bun"
+silent = true
