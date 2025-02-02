@@ -9,7 +9,6 @@ import {
 import pluginHMR, { type PluginHMROptions } from "./plugins/hmr";
 import pluginMinify, { type PluginMinifyOptions } from "./plugins/minify";
 import pluginPatch, { type PluginPatchOptions } from "./plugins/patch";
-import pluginWASM, { type PluginWASMOptions } from "./plugins/wasm";
 
 export type {
     PluginDTSOptions,
@@ -41,10 +40,6 @@ export type PluginEmscripten = {
      * Patch options.
      */
     patch?: PluginPatchOptions;
-    /**
-     * WASM options.
-     */
-    wasm?: PluginWASMOptions;
 };
 
 export default (config: PluginEmscripten = {}): Plugin[] => {
@@ -68,10 +63,6 @@ export default (config: PluginEmscripten = {}): Plugin[] => {
 
     if (config.patch) {
         plugins.push(pluginPatch(config.patch));
-    }
-
-    if (config.wasm) {
-        plugins.push(pluginWASM(config.wasm));
     }
 
     return [
