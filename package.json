@@ -1,6 +1,6 @@
 {
     "name": "vite-plugin-emscripten",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A Vite plugin for compiling Emscripten projects",
     "author": {
         "name": "Blaquewithaq",
@@ -18,7 +18,9 @@
         "registry": "https://registry.npmjs.org"
     },
     "type": "module",
-    "files": ["dist/**/*"],
+    "files": [
+        "dist/**/*"
+    ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -53,5 +55,8 @@
     "peerDependencies": {
         "typescript": "5.7.3"
     },
-    "trustedDependencies": ["@biomejs/biome", "esbuild"]
+    "trustedDependencies": [
+        "@biomejs/biome",
+        "esbuild"
+    ]
 }
